@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "thearmaandeep_backend": {
+      "main": "src/thearmaandeep_backend/main.mo",
+      "type": "motoko"
+    },
+    "thearmaandeep_frontend": {
+      "dependencies": [
+        "thearmaandeep_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/thearmaandeep_frontend/src/index.html"
+      },
+      "source": [
+        "src/thearmaandeep_frontend/assets",
+        "dist/thearmaandeep_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
